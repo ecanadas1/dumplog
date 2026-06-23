@@ -1,1 +1,0 @@
-flet pack Analisis_log.py --name "Log_analisis" --icon "assets/icon.ico" --add-data "locales;locales" --add-data "assets;assets"
