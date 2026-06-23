@@ -1,0 +1,115 @@
+[
+  {
+    "id": "syslog_json",
+    "name": "Syslog (JSON Profile)",
+    "regex": "^([A-Z][a-z]{2}\\s+\\d+\\s+\\d{2}:\\d{2}:\\d{2})\\s+(\\S+)\\s+([^:\\[\\s]+)(?:\\s*\\[(\\d+)\\])?:?\\s*(.*)$",
+    "mapping": {
+      "timestamp": 1,
+      "host": 2,
+      "proceso": 3,
+      "pid": 4,
+      "mensaje": 5
+    },
+    "date_format": "%b %d %H:%M:%S",
+    "extra_columns": [
+      "host",
+      "proceso",
+      "pid"
+    ]
+  },
+  {
+    "id": "xpr_json",
+    "name": "XPR Error",
+    "regex": "^(\\d{2}:\\d{2}:\\d{2}\\.\\d{3})\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(.*)$",
+    "mapping": {
+      "timestamp": 1,
+      "proceso": 2,
+      "evento": 3,
+      "nivel": 4,
+      "mensaje": 5
+    },
+    "date_format": "%H:%M:%S.%f",
+    "extra_columns": [
+      "proceso",
+      "evento"
+    ]
+  },
+  {
+    "id": "apache_error",
+    "name": "Apache Error Log",
+    "regex": "^\\[([^\\]]+)\\]\\s+\\[([^:\\]]+):?([^\\]]*)\\]\\s+(?:\\[pid\\s+([^\\]]+)\\]\\s+)?(?:\\[client\\s+([^\\]]+)\\]\\s+)?(.*)$",
+    "mapping": {
+      "timestamp": 1,
+      "proceso": 2,
+      "nivel": 3,
+      "pid": 4,
+      "client": 5,
+      "mensaje": 6
+    },
+    "date_format": "%a %b %d %H:%M:%S.%f %Y",
+    "extra_columns": [
+      "proceso",
+      "nivel",
+      "pid",
+      "client"
+    ]
+  },
+  {
+    "id": "rtpproxy_log",
+    "name": "RTPProxy Log",
+    "regex": "^(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:[+-]\\d{2}:?\\d{2}|Z))\\s+\\[([^\\]]+)\\]\\s+([^:]+):(?:\\[(\\d+)\\])?\\s+([^:]+:\\d+):\\s*(.*)$",
+    "mapping": {
+      "timestamp": 1,
+      "nivel": 2,
+      "proceso": 3,
+      "pid": 4,
+      "evento": 5,
+      "mensaje": 6
+    },
+    "date_format": "%Y-%m-%dT%H:%M:%S%z",
+    "extra_columns": [
+      "nivel",
+      "proceso",
+      "pid",
+      "evento"
+    ]
+  },
+  {
+    "id": "ssm_log",
+    "name": "SSM Log",
+    "regex": "^(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:[+-]\\d{2}:?\\d{2}|Z))\\s+\\[([^\\]]+)\\]\\s+(\\d+)\\s+\\[([^:]+):(\\d+)\\]\\s+(.*)$",
+    "mapping": {
+      "timestamp": 1,
+      "nivel": 2,
+      "pid": 3,
+      "file": 4,
+      "line_number": 5,
+      "mensaje": 6
+    },
+    "date_format": "%Y-%m-%dT%H:%M:%S%z",
+    "extra_columns": [
+      "nivel",
+      "pid",
+      "file",
+      "line_number"
+    ]
+  },
+  {
+    "id": "sipserver_log",
+    "name": "SIP Server Log",
+    "regex": "^(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:[+-]\\d{2}:?\\d{2}|Z))\\s+\\[([^\\]]+)\\]\\s+([^:\\s]+):\\s+(?:[<\\[](\\d+)[>\\]])?\\s*(.*)$",
+    "mapping": {
+      "timestamp": 1,
+      "nivel": 2,
+      "proceso": 3,
+      "pid": 4,
+      "mensaje": 5
+    },
+    "date_format": "%Y-%m-%dT%H:%M:%S%z",
+    "extra_columns": [
+      "nivel",
+      "proceso",
+      "pid"
+    ]
+  }
+]

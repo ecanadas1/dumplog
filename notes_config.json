@@ -1,0 +1,78 @@
+[
+    {
+        "keywords": ["Process", "Killed"],
+        "text": "Process Killed"
+    },
+    {
+        "keywords": ["full", "queue"],
+        "text": "Queue full"
+    },
+    {
+        "keywords": ["node", "starting"],
+        "text": "Node start"
+    },
+    {
+        "keywords": ["memory", "utilization"],
+        "text": "Memory Utilization"
+    },
+    {
+        "keywords": ["cpu", "utilization"],
+        "text": "CPU Utilization"
+    },
+    {
+        "keywords": ["Alias", "changed", "state"],
+        "text": "Alias state change"
+    },
+    {
+        "keywords": ["TCA", "Logging", "limit", "exceeded"],
+        "text": "TCA (threshold crossing alarm)"
+    },
+    {
+        "keywords": ["TCA", "been", "removed"],
+        "text": "TCA (threshold crossing alarm)"
+    },
+    {
+        "keywords": ["RTP", "node", "down", "up"],
+        "text": "Node change state"
+    },
+    {
+        "keywords": ["OS", "cluster", "change"],
+        "text": "OS Cluster Change"
+    },
+    {
+        "keywords": ["RTP", "cluster", "change"],
+        "text": "RTP Cluster Change"
+    },
+    {
+        "keywords": ["APPL", "X-Channel", "communication"],
+        "text": "X-Channel"
+    },
+    {
+        "keywords": ["APPL", "CSTA", "communication"],
+        "text": "CSTA Hunt"
+    },
+    {
+        "keywords": ["APPL", "License", "exceed"],
+        "text": "License Exceed"
+    },
+    {
+        "keywords": ["APPL", "Account", "Expire"],
+        "text": "Password Expired"
+    },
+    {
+        "keywords": ["OS", "Failed", "password"],
+        "text": "Password Failed"
+    },
+    {
+        "keywords": ["shutdown"],
+        "text": "Shutdown"
+    },
+    {
+        "keywords": ["OS", "NEW ATTACK"],
+        "text": "NEW ATTACK"
+    },
+    {
+        "keywords": ["APP", "Reserv", "below"],
+        "text": "CPU/Memory Reserved"
+    }
+]
